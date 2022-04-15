@@ -12,6 +12,9 @@
           <q-btn-dropdown stretch flat label="Artists">
             <q-list>
               <q-item-label header>Artist 1</q-item-label>
+              <q-item-section
+                ><q-item-label caption>born/died </q-item-label>
+              </q-item-section>
               <q-item
                 v-for="n in 3"
                 :key="`x.${n}`"
@@ -21,13 +24,15 @@
               >
                 <q-item-section>
                   <q-item-label>Photos</q-item-label>
-                  <q-item-label caption>born/died </q-item-label>
                 </q-item-section>
               </q-item>
 
               <q-separator inset spaced />
 
               <q-item-label header>Artist 2</q-item-label>
+              <q-item-section
+                ><q-item-label caption>born/died </q-item-label>
+              </q-item-section>
               <q-item
                 v-for="n in 3"
                 :key="`x.${n}`"
@@ -37,7 +42,6 @@
               >
                 <q-item-section>
                   <q-item-label>Photos</q-item-label>
-                  <q-item-label caption>born/died </q-item-label>
                 </q-item-section>
               </q-item>
             </q-list>
@@ -47,9 +51,7 @@
 
       <q-page-container>
         <q-page class="q-pa-md">
-          <p v-for="n in 15" :key="n">
-            <GalleryCarouselC />
-          </p>
+          <GalleryCarouselC />
         </q-page>
       </q-page-container>
     </q-layout>

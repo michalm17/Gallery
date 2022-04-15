@@ -5,6 +5,7 @@
         1 of 3
 
         <q-carousel
+          :height="windowHeight"
           swipeable
           animated
           :autoplay="autoplay"
@@ -15,6 +16,7 @@
         >
           <q-carousel-slide
             :name="1"
+            class="flex flex-center"
             img-src="https://www.printsandfineart.co.uk/previews/none/none/none/800/12-18-I/16-22-I/GM4577.jpg"
           />
           <q-carousel-slide
@@ -91,6 +93,9 @@
 import { ref } from "vue";
 
 export default {
+  created() {
+    this.windowHeight = window.innerHeight + "px";
+  },
   setup() {
     return {
       slide: ref(1),
