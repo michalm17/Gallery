@@ -1,15 +1,15 @@
 <template>
   <q-page class="center">
-    <CarouselC></CarouselC>
+    <GalleryLayoutC />
   </q-page>
 </template>
 
 <script>
 import { defineComponent } from "vue";
-import CarouselC from "src/components/CarouselC.vue";
+import GalleryLayoutC from "src/components/GalleryLayoutC.vue";
 
 export default defineComponent({
   name: "IndexPage",
-  components: { CarouselC },
+  components: { GalleryLayoutC },
 });
 </script>
