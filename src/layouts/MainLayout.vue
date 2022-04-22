@@ -4,7 +4,7 @@
       <q-toolbar>
         <CLink v-for="link in essentialLinks" :key="link.title" v-bind="link" />
 
-        <q-toolbar-title></q-toolbar-title>
+        <q-toolbar-title>Gallery</q-toolbar-title>
 
         <div>Quasar v{{ $q.version }}</div>
       </q-toolbar>
@@ -20,6 +20,8 @@
 <script>
 import { defineComponent, ref } from "vue";
 import CLink from "components/CLink.vue";
+
+const mainWindowV = ["gallery", "aboutMe"];
 
 const linksList = [
   {
