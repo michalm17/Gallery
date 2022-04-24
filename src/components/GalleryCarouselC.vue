@@ -1,6 +1,6 @@
 <template>
   <div class="q-pa-md doc-container">
-    <div class="column" style="height: 300px; max-height: 100%">
+    <div class="column" style="height: windowheight; max-height: 100%">
       <div class="col-9">
         1 of 3
 
@@ -19,10 +19,8 @@
             class="flex flex-center"
             img-src="https://www.printsandfineart.co.uk/previews/none/none/none/800/12-18-I/16-22-I/GM4577.jpg"
           />
-          <q-carousel-slide
-            :name="2"
-            img-src="https://doyle.com/sites/default/files/styles/auction_slider/public/images/lots/217/1443217.jpg?itok=WYS6IYR8"
-          />
+          <q-carousel-slide :name="2" class="flex"
+          img-src=src/assets/TheSleepingBeautyWolf.jpg />
           <q-carousel-slide :name="3" img-src="" />
           <q-carousel-slide :name="4" img-src="" />
 

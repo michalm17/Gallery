@@ -5,8 +5,6 @@
         <CLink v-for="link in essentialLinks" :key="link.title" v-bind="link" />
 
         <q-toolbar-title>Gallery</q-toolbar-title>
-
-        <div>Quasar v{{ $q.version }}</div>
       </q-toolbar>
     </q-header>
 
