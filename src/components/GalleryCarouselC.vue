@@ -1,6 +1,6 @@
 <template>
   <div class="q-pa-md doc-container">
-    <div class="column" style="height: windowheight; max-height: 100%">
+    <div class="column" style="height: windowHeight; max-height: 100%">
       <div class="col-9">
         1 of 3
 
@@ -16,10 +16,10 @@
         >
           <q-carousel-slide
             :name="1"
-            class="flex flex-center"
+            class="inline-flex"
             img-src="https://www.printsandfineart.co.uk/previews/none/none/none/800/12-18-I/16-22-I/GM4577.jpg"
           />
-          <q-carousel-slide :name="2" class="flex"
+          <q-carousel-slide :name="2" class="flex flex-center"
           img-src=src/assets/TheSleepingBeautyWolf.jpg />
           <q-carousel-slide :name="3" img-src="" />
           <q-carousel-slide :name="4" img-src="" />
@@ -92,7 +92,7 @@ import { ref } from "vue";
 
 export default {
   created() {
-    this.windowHeight = window.innerHeight + "px";
+    this.windowHeight = window.innerHeight + "px" - 100 + "px";
   },
   setup() {
     return {

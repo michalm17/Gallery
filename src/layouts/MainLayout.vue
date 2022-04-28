@@ -1,11 +1,10 @@
 <template>
   <q-layout view="lHh Lpr lFf">
     <q-header elevated>
-      <q-toolbar>
-        <CLink v-for="link in essentialLinks" :key="link.title" v-bind="link" />
+      <q-toolbar-title class="text-center">Gallery</q-toolbar-title>
 
-        <q-toolbar-title>Gallery</q-toolbar-title>
-      </q-toolbar>
+      <q-btn v-if="viewWindow" @click="viewWindow = !viewWindow">About</q-btn>
+      <q-btn v-else @click="viewWindow = !viewWindow">Gallery</q-btn>
     </q-header>
 
     <q-page-container>
@@ -17,48 +16,16 @@
 
 <script>
 import { defineComponent, ref } from "vue";
-import CLink from "components/CLink.vue";
 
-const mainWindowV = ["gallery", "aboutMe"];
-
-const linksList = [
-  {
-    title: "Gallery",
-    caption: "Main Page",
-    icon: "alarm",
-    link: "",
-  },
-  {
-    title: "About",
-    caption: "Little something",
-    icon: "alarm",
-    link: "",
-  },
-  {
-    title: "Github",
-    caption: "github.com/michalm17",
-    icon: "code",
-    link: "https://github.com/michalm17",
-  },
-
-  {
-    title: "Facebook",
-    caption: "Michał Matysiak",
-    icon: "public",
-    link: "https://www.facebook.com/profile.php?id=100066908805765",
-  },
-];
-
+const view = "gallery";
 export default defineComponent({
   name: "MainLayout",
 
-  components: {
-    CLink,
-  },
+  components: {},
 
-  setup() {
+  data() {
     return {
-      essentialLinks: linksList,
+      viewWindow: true,
     };
   },
 });

@@ -42,22 +42,18 @@
         </q-list>
       </q-btn-dropdown>
     </q-toolbar>
+    <GalleryCarouselC />
   </div>
 </template>
 
 <script>
 import { ref } from "vue";
+import GalleryCarouselC from "./GalleryCarouselC.vue";
 
 export default {
-  components: {},
+  components: { GalleryCarouselC },
   setup() {
-    return {
-      slide: ref(1),
-      autoplay: ref(false),
-      fullscreen: ref(false),
-      //img fit
-      fitModes: ["cover", "fill", "contain", "none", "scale-down"],
-    };
+    return {};
   },
 };
 </script>
