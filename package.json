@@ -1,8 +1,8 @@
 {
-  "name": "qnew",
+  "name": "gallery",
   "version": "0.0.1",
-  "description": "A Quasar Project",
-  "productName": "qnew",
+  "description": "A Quasar gallery project",
+  "productName": "Gallery",
   "author": "michalm17 <michal.pm17@gmail>",
   "private": true,
   "scripts": {

@@ -1,7 +1,7 @@
 <template>
   <div class="q-pa-md doc-container">
     <div class="column" style="height: windowHeight; max-height: 100%">
-      <div class="col-9">
+      <div class="col">
         1 of 3
 
         <q-carousel
