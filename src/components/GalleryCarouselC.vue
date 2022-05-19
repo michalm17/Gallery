@@ -14,15 +14,11 @@
           infinite
           v-model:fullscreen="fullscreen"
         >
-          <q-carousel-slide
-            :name="1"
-            class="inline-flex"
-            img-src="https://www.printsandfineart.co.uk/previews/none/none/none/800/12-18-I/16-22-I/GM4577.jpg"
-          />
-          <q-carousel-slide :name="2" class="flex flex-center"
-          img-src=src/assets/TheSleepingBeautyWolf.jpg />
-          <q-carousel-slide :name="3" img-src="" />
-          <q-carousel-slide :name="4" img-src="" />
+          <q-carousel-slide :name="1" class="flex flex-center"
+          img-src=src/assets/LeonBakst2.jpg /> <q-carousel-slide :name="2"
+          class="flex flex-center" img-src=src/assets/TheSleepingBeautyWolf.jpg
+          /> <q-carousel-slide :name="3" class="flex flex-center"
+          img-src=src/assets/LeonBakst1.png />
 
           <template v-slot:control>
             <q-carousel-control
