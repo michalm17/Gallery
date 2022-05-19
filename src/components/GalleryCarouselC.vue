@@ -1,6 +1,6 @@
 <template>
   <div class="q-pa-md doc-container">
-    <div class="column" style="height: windowHeight; max-height: 100%">
+    <div class="column">
       <div class="col">
         1 of 3
 
@@ -92,7 +92,7 @@ import { ref } from "vue";
 
 export default {
   created() {
-    this.windowHeight = window.innerHeight + "px" - 100 + "px";
+    this.windowHeight = window.innerHeight + "px";
   },
   setup() {
     return {
@@ -108,10 +108,7 @@ export default {
 
 <style lang="sass" scoped>
 .column > div
-  padding: 10px 15px
-  background: rgba(86, 61, 124, .15)
-  border: 1px solid rgba(86, 61, 124, .2)
-
-.column + .column
-  margin-top: 1rem
+  padding: 25px 40px
+  background: rgba(100, 100, 124, .15)
+  border: 1px rgba(8, 6, 12, .2)
 </style>

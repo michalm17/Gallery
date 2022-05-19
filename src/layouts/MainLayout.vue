@@ -1,31 +1,44 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
-    <q-header elevated>
-      <q-toolbar-title class="text-center">Gallery</q-toolbar-title>
+  <div class="q-pa-md q-gutter-y-sm">
+    <q-layout view="lHh Lpr lFf">
+      <q-header elevated>
+        <q-toolbar-title class="text-center text-primary"
+          >Gallery</q-toolbar-title
+        >
 
-      <q-btn
-        class="row justify-center"
-        v-if="viewWindow"
-        @click="viewWindow = !viewWindow"
-        icon="school"
-        to="about"
-      />
-      <q-btn
-        class="row justify-center"
-        v-else
-        @click="viewWindow = !viewWindow"
-        icon="brush"
-        to="/"
-      />
+        <q-img
+          src="src/assets/frame.jpg"
+          :ratio="4 / 3"
+          width="auto"
+          height="100px"
+          class="header-image absolute-top"
+        >
+        </q-img>
 
-      <q-img src="src/assets/frame.jpg" class="header-image absolute-top" />
-    </q-header>
+        <q-btn
+          class="row"
+          v-if="viewWindow"
+          @click="viewWindow = !viewWindow"
+          to="about"
+        >
+          <q-icon name="school" color="primary" size="30px" />
+        </q-btn>
 
-    <q-page-container>
-      <router-view />
-    </q-page-container>
-    <q-footer reveal:true bordered:true> Abc</q-footer>
-  </q-layout>
+        <q-btn
+          class="row justify-center"
+          v-else
+          @click="viewWindow = !viewWindow"
+          to="/"
+        >
+          <q-icon name="brush" color="primary" size="30px" />
+        </q-btn>
+      </q-header>
+
+      <q-page-container>
+        <router-view />
+      </q-page-container>
+    </q-layout>
+  </div>
 </template>
 
 <script>
@@ -47,7 +60,6 @@ export default defineComponent({
 
 <style lang="scss">
 .header-image {
-  height: 100%;
   z-index: -1;
 }
 </style>
