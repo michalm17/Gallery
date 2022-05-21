@@ -59,6 +59,14 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
+.q-img {
+  padding-top: 0 !important;
+}
+
+.router-view {
+  z-index: 1;
+}
+
 .header-image {
   z-index: -1;
 }
