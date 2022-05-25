@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="q-my-xl">
     <q-toolbar>
       <CLink v-for="link in myLinks" :key="link.title" v-bind="link" />
     </q-toolbar>
