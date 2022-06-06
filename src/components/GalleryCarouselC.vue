@@ -1,10 +1,10 @@
 <template>
-  <div class="q-mx-sm">
+  <div class="q-mx-lg">
     <div class="column">
-      <div class="col">
+      <div>
         1 of 3
+
         <q-carousel
-          :height="windowHeight"
           swipeable
           animated
           :autoplay="autoplay"
@@ -13,11 +13,21 @@
           infinite
           v-model:fullscreen="fullscreen"
         >
-          <q-carousel-slide :name="1" img-src=src/assets/LeonBakst2.jpg />
-          <q-carousel-slide :name="2" class="flex flex-center"
-          img-src=src/assets/TheSleepingBeautyWolf.jpg /> <q-carousel-slide
-          :name="3" class="flex flex-center" img-src=src/assets/LeonBakst1.png
-          />
+          <q-carousel-slide :name="1">
+            <div class="flex flex-center">
+              <q-img src="src/assets/LeonBakst2.jpg" />
+            </div>
+          </q-carousel-slide>
+          <q-carousel-slide :name="2">
+            <div class="flex flex-center">
+              <q-img src="src/assets/TheSleepingBeautyWolf.jpg" />
+            </div>
+          </q-carousel-slide>
+          <q-carousel-slide :name="3">
+            <div class="flex flex-center">
+              <q-img src="src/assets/LeonBakst1.png" />
+            </div>
+          </q-carousel-slide>
 
           <template v-slot:control>
             <q-carousel-control
@@ -47,7 +57,7 @@
         </q-carousel>
       </div>
 
-      <div class="col-6">
+      <div>
         2 of 3
         <q-btn
           push
@@ -77,7 +87,7 @@
         />
       </div>
 
-      <div class="col">
+      <div>
         3 of 3
         <p>Opis</p>
       </div>
@@ -104,11 +114,10 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-.column > div
-  padding: 25px 40px
-  background: rgba(10, 100, 124, .15)
-  border: 1px rgba(8, 6, 12, .2)
+.q-img
 
-.q-carousel-slide
-  height: 100px
+
+
+  width: 250px
+  box-shadow: 0 4px 10px 0 rgba(0, 20, 0, 20), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
 </style>
