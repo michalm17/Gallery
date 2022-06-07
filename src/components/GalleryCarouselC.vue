@@ -2,8 +2,6 @@
   <div class="q-mx-lg">
     <div class="column">
       <div>
-        1 of 3
-
         <q-carousel
           swipeable
           animated
@@ -86,11 +84,6 @@
           @click="$refs.carousel.next()"
         />
       </div>
-
-      <div>
-        3 of 3
-        <p>Opis</p>
-      </div>
     </div>
   </div>
 </template>
@@ -115,9 +108,6 @@ export default {
 
 <style lang="sass" scoped>
 .q-img
-
-
-
   width: 250px
   box-shadow: 0 4px 10px 0 rgba(0, 20, 0, 20), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
 </style>

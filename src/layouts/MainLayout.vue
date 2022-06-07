@@ -1,16 +1,18 @@
 <template>
   <div class="">
-    <q-layout view="lHh Lpr lFf">
+    <q-layout view="lhh Lpr lFf">
       <q-header>
         <q-toolbar-title class="text-center text-primary"
           >Gallery</q-toolbar-title
         >
-
+        <!--
+  add a class or Id to display the image on both sides
+  -->
         <q-img
           src="src/assets/frame.jpg"
-          width="100%"
-          height="150%"
-          class="header-image absolute-top"
+          width="100px"
+          height="100px"
+          class="header-image absolute-top-right"
         >
         </q-img>
 
@@ -56,8 +58,9 @@ export default defineComponent({
 .router-view {
   z-index: 1;
 }
-
+//add a class or id for header image
 .header-image {
   z-index: -1;
+  transform: rotateY(180deg);
 }
 </style>
