@@ -31,7 +31,7 @@
             <q-carousel-control
               position="bottom-right"
               :offset="[18, 18]"
-              class="text-white rounded-borders"
+              class="text-dark rounded-borders"
               style="background: rgba(0, 0, 0, 0); padding: 1px 1px"
             >
               <q-btn
