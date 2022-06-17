@@ -2,7 +2,9 @@
   <div class="">
     <q-layout view="lhh Lpr lFf">
       <q-header>
-        <q-toolbar-title class="text-center text-dark">Gallery</q-toolbar-title>
+        <q-toolbar-title class="text-center text-dark"
+          >Gallery dropdown</q-toolbar-title
+        >
 
         <q-img
           src="src/assets/frame.jpg"
@@ -20,21 +22,23 @@
           style=""
         >
         </q-img>
-        <!--router view button -->
-        <q-btn
-          class="row"
-          v-if="viewWindow"
-          @click="viewWindow = !viewWindow"
-          to="about"
-        >
-          <q-icon name="school" color="dark" size="30px" />
-        </q-btn>
-
-        <q-btn class="row" v-else @click="viewWindow = !viewWindow" to="/">
-          <q-icon name="brush" color="dark" size="30px" />
-        </q-btn>
       </q-header>
+      <!--  router view button must be putted in Gallery, dropdown to save a space
 
+      <q-btn
+        class="row"
+        v-if="viewWindow"
+        @click="viewWindow = !viewWindow"
+        to="about"
+      >
+        <q-icon name="school" color="dark" size="30px" />
+      </q-btn>
+
+      <q-btn class="row" v-else @click="viewWindow = !viewWindow" to="/">
+        <q-icon name="brush" color="dark" size="30px" />
+      </q-btn>
+
+      -->
       <q-page-container>
         <router-view />
       </q-page-container>
