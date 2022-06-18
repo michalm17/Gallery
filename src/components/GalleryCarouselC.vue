@@ -18,12 +18,12 @@
           </q-carousel-slide>
           <q-carousel-slide :name="2">
             <div class="flex flex-center">
-              <q-img src="src/assets/TheSleepingBeautyWolf.jpg" />
+              <q-img v-bind:src="images[1].src" />
             </div>
           </q-carousel-slide>
           <q-carousel-slide :name="3">
             <div class="flex flex-center">
-              <q-img src="src/assets/LeonBakst1.png" />
+              <q-img v-bind:src="images[2].src" />
             </div>
           </q-carousel-slide>
 
@@ -98,19 +98,21 @@ export default {
     return {
       images: [
         {
-          id: "0",
-          src: "src/assets/LeonBakst1.png",
-          title: "some text",
+          src: "src/assets/LeonBakst1" + ".png",
+          name: "some text",
+          age: "1234",
         },
         {
-          id: "1",
-          url: "../assets/img2.jpg",
-          title: "some text",
+          src: "src/assets/LeonBakst2" + ".jpg",
+          name: "some text",
+
+          age: "1234",
         },
         {
-          id: "2",
-          url: "../assets/img3.jpg",
-          title: "some text",
+          src: "src/assets/LeonBakst3" + ".jpg",
+          name: "some text",
+
+          age: "1234",
         },
       ],
     };
