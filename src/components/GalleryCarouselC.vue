@@ -13,7 +13,7 @@
         >
           <q-carousel-slide :name="1">
             <div class="flex flex-center">
-              <q-img src="src/assets/LeonBakst2.jpg" />
+              <q-img v-bind:src="images[0].src" />
             </div>
           </q-carousel-slide>
           <q-carousel-slide :name="2">
@@ -93,6 +93,27 @@ import { ref } from "vue";
 export default {
   created() {
     this.windowHeight = window.innerHeight + "px";
+  },
+  data() {
+    return {
+      images: [
+        {
+          id: "0",
+          src: "src/assets/LeonBakst1.png",
+          title: "some text",
+        },
+        {
+          id: "1",
+          url: "../assets/img2.jpg",
+          title: "some text",
+        },
+        {
+          id: "2",
+          url: "../assets/img3.jpg",
+          title: "some text",
+        },
+      ],
+    };
   },
   setup() {
     return {
