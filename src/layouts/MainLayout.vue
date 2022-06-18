@@ -7,7 +7,7 @@
         >
 
         <q-img
-          src="src/assets/frame.jpg"
+          src="src/assets/frame.png"
           width="100px"
           height="100px"
           class="header-image absolute-top-right"
@@ -15,7 +15,7 @@
         >
         </q-img>
         <q-img
-          src="src/assets/frame.jpg"
+          src="src/assets/frame.png"
           width="100px"
           height="100px"
           class="header-image absolute-top-left"
