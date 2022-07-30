@@ -1,98 +1,49 @@
+<!-- eslint-disable prettier/prettier -->
 <template>
-  <div class="q-mx-lg">
-    <div class="column">
-      <div>
-        <q-carousel
-          swipeable
-          animated
-          :autoplay="autoplay"
-          v-model="slide"
-          ref="carousel"
-          infinite
-          v-model:fullscreen="fullscreen"
-        >
-          <q-carousel-slide :name="1">
-            <div class="flex flex-center">
-              <q-img v-bind:src="images[0].src" />
-            </div>
-          </q-carousel-slide>
-          <q-carousel-slide :name="2">
-            <div class="flex flex-center">
-              <q-img v-bind:src="images[1].src" />
-            </div>
-          </q-carousel-slide>
-          <q-carousel-slide :name="3">
-            <div class="flex flex-center">
-              <q-img v-bind:src="images[2].src" />
-            </div>
-          </q-carousel-slide>
-
-          <template v-slot:control>
-            <q-carousel-control
-              position="bottom-right"
-              :offset="[18, 18]"
-              class="text-dark rounded-borders"
-              style="background: rgba(0, 0, 0, 0); padding: 1px 1px"
-            >
-              <q-btn
-                push
-                round
-                dense
-                color="primary"
-                text-color="secondary"
-                :icon="fullscreen ? 'fullscreen_exit' : 'fullscreen'"
-                @click="fullscreen = !fullscreen"
-              />
-            </q-carousel-control>
-
-            <q-carousel-control
-              position="bottom-right"
-              :offset="[18, 18]"
-              class="q-gutter"
-            >
-            </q-carousel-control>
-          </template>
-        </q-carousel>
-      </div>
-
-      <div>
-        2 of 3
-        <q-btn
-          push
-          round
-          dense
-          color="primary"
-          text-color="black"
-          icon="arrow_left"
-          @click="$refs.carousel.previous()"
-        />
-        <q-toggle
-          dense
-          dark
-          color="primary"
-          v-model="autoplay"
-          label="Auto Play"
-        />
-
-        <q-btn
-          push
-          round
-          dense
-          color="primary"
-          text-color="black"
-          icon="arrow_right"
-          @click="$refs.carousel.next()"
-        />
-      </div>
-    </div>
-  </div>
+  <swiper
+    :effect="'coverflow'"
+    :grabCursor="true"
+    :centeredSlides="true"
+    :slidesPerView="'auto'"
+    :coverflowEffect="{
+      rotate: 25,
+      stretch: 20,
+      depth: 260,
+      modifier: 3,
+      slideShadows: true,
+    }"
+    :pagination="false"
+    :modules="modules"
+    class="mySwiper"
+  >
+    <swiper-slide><img v-bind:src="images[0].src" /></swiper-slide
+    ><swiper-slide><img v-bind:src="images[0].src" /></swiper-slide
+    ><swiper-slide><img v-bind:src="images[1].src" /></swiper-slide
+    ><swiper-slide><img v-bind:src="images[2].src" /></swiper-slide>
+  </swiper>
 </template>
 <script>
-import { ref } from "vue";
+// Import Swiper Vue.js components
+import { Swiper, SwiperSlide } from "swiper/vue";
+
+// Import Swiper styles
+import "swiper/css";
+
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+
+// import required modules
+import { EffectCoverflow, Pagination } from "swiper";
 
 export default {
-  created() {
-    this.windowHeight = window.innerHeight + "px";
+  components: {
+    Swiper,
+    SwiperSlide,
+  },
+  setup() {
+    return {
+      modules: [EffectCoverflow, Pagination],
+    };
   },
   data() {
     return {
@@ -117,20 +68,42 @@ export default {
       ],
     };
   },
-  setup() {
-    return {
-      slide: ref(1),
-      autoplay: ref(false),
-      fullscreen: ref(false),
-      //img fit
-      fitModes: ["cover", "fill", "contain", "none", "scale-down"],
-    };
-  },
 };
 </script>
+<style scoped>
+#app {
+  height: 100%;
+}
+html,
+body {
+  position: relative;
+  height: 100%;
+}
 
-<style lang="sass" scoped>
-.q-img
-  width: 250px
-  box-shadow: 0 4px 10px 0 rgba(0, 20, 0, 20), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
 </style>
