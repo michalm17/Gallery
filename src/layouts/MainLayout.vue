@@ -23,7 +23,6 @@
         >
         </q-img>
       </q-header>
-      <!--  router view button must be putted in Gallery, dropdown to save a space
 
       <q-btn
         class="row"
@@ -31,14 +30,13 @@
         @click="viewWindow = !viewWindow"
         to="about"
       >
-        <q-icon name="school" color="dark" size="30px" />
+        <q-icon name="school" color="dark" size="60px" />
       </q-btn>
 
       <q-btn class="row" v-else @click="viewWindow = !viewWindow" to="/">
-        <q-icon name="brush" color="dark" size="30px" />
+        <q-icon name="brush" color="dark" size="60px" />
       </q-btn>
 
-      -->
       <q-page-container>
         <router-view />
       </q-page-container>

@@ -10,10 +10,11 @@
       stretch: 20,
       depth: 260,
       modifier: 3,
-      slideShadows: true,
+      slideShadows: false,
     }"
     :pagination="false"
     :modules="modules"
+    :loop="true"
     class="mySwiper"
   >
     <swiper-slide><img v-bind:src="images[0].src" /></swiper-slide
@@ -103,7 +104,9 @@ body {
 }
 
 .swiper-slide img {
+  margin: auto;
   display: block;
-  width: 100%;
+  width: auto;
+  height: 300px;
 }
 </style>
