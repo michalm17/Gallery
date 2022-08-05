@@ -6,9 +6,9 @@
     :centeredSlides="true"
     :slidesPerView="'auto'"
     :coverflowEffect="{
-      rotate: 25,
-      stretch: 20,
-      depth: 260,
+      rotate: 15,
+      stretch: 5,
+      depth: 5,
       modifier: 3,
       slideShadows: false,
     }"
@@ -17,10 +17,11 @@
     :loop="true"
     class="mySwiper"
   >
-    <swiper-slide><img v-bind:src="images[0].src" /></swiper-slide
-    ><swiper-slide><img v-bind:src="images[0].src" /></swiper-slide
-    ><swiper-slide><img v-bind:src="images[1].src" /></swiper-slide
-    ><swiper-slide><img v-bind:src="images[2].src" /></swiper-slide>
+    <swiper-slide><img v-bind:src="artist[0].src[0]" /></swiper-slide
+    ><swiper-slide><img v-bind:src="artist[0].src[1]" /></swiper-slide
+    ><swiper-slide><img v-bind:src="artist[0].src[2]" /></swiper-slide
+    ><swiper-slide><img v-bind:src="artist[1].src[0]" /></swiper-slide>
+    <swiper-slide><img v-bind:src="artist[1].src[1]" /></swiper-slide>
   </swiper>
 </template>
 <script>
@@ -48,23 +49,28 @@ export default {
   },
   data() {
     return {
-      images: [
+      artist: [
         {
-          src: "src/assets/LeonBakst1" + ".png",
-          name: "some text",
+          name: "Leon Bakst",
           age: "1234",
+          src: [
+            "src/assets/Leon Bakst/" + "1" + ".jpg",
+            "src/assets/Leon Bakst/" + "2" + ".jpg",
+            "src/assets/Leon Bakst/" + "3" + ".jpg",
+          ],
         },
         {
-          src: "src/assets/LeonBakst2" + ".jpg",
-          name: "some text",
-
+          name: "Utagawa Hiroshige",
           age: "1234",
+          src: [
+            "src/assets/Utagawa Hiroshige/" + "1" + ".jpg",
+            "src/assets/Utagawa Hiroshige/" + "2" + ".jpg",
+          ],
         },
         {
-          src: "src/assets/LeonBakst3" + ".jpg",
           name: "some text",
-
           age: "1234",
+          src: "src/assets/Name Surname/" + "number" + ".jpg",
         },
       ],
     };
@@ -99,7 +105,7 @@ body {
 .swiper-slide {
   background-position: center;
   background-size: cover;
-  width: 300px;
+  width: auto;
   height: 300px;
 }
 
