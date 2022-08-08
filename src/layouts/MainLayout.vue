@@ -1,13 +1,13 @@
 <template>
   <div class="">
-    <q-layout view="lhh Lpr lFf">
+    <q-layout view="2hh Lpr lFf">
       <q-header>
         <q-toolbar-title class="text-center text-dark"
           >Gallery dropdown</q-toolbar-title
         >
 
         <q-img
-          src="src/assets/frame.png"
+          src="src/assets/Frame/frame.png"
           width="100px"
           height="100px"
           class="header-image absolute-top-right"
@@ -15,7 +15,7 @@
         >
         </q-img>
         <q-img
-          src="src/assets/frame.png"
+          src="src/assets/Frame/frame.png"
           width="100px"
           height="100px"
           class="header-image absolute-top-left"
@@ -25,12 +25,15 @@
       </q-header>
 
       <q-btn
+        round
         class="row"
+        padding="35px"
         v-if="viewWindow"
         @click="viewWindow = !viewWindow"
         to="about"
+        unelevated
       >
-        <q-icon name="school" color="dark" size="60px" />
+        <q-icon name="school" color="dark" size="30px" />
       </q-btn>
 
       <q-btn class="row" v-else @click="viewWindow = !viewWindow" to="/">

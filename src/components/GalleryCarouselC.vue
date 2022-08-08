@@ -81,8 +81,7 @@ export default {
 #app {
   height: 100%;
 }
-html,
-body {
+html body {
   position: relative;
   height: 100%;
 }
