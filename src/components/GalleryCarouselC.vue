@@ -37,6 +37,10 @@ import "swiper/css/pagination";
 // import required modules
 import { EffectCoverflow, Pagination } from "swiper";
 
+// Artist name variable, for changing a routing site and contain of swiper
+let artistName = "Leon Bakst";
+let imageNumber = 1;
+
 export default {
   components: {
     Swiper,
@@ -54,7 +58,7 @@ export default {
           name: "Leon Bakst",
           age: "1234",
           src: [
-            "src/assets/Leon Bakst/" + "1" + ".jpg",
+            "src/assets/" + artistName + "/" + imageNumber + ".jpg",
             "src/assets/Leon Bakst/" + "2" + ".jpg",
             "src/assets/Leon Bakst/" + "3" + ".jpg",
           ],
@@ -81,7 +85,8 @@ export default {
 #app {
   height: 100%;
 }
-html body {
+html,
+body {
   position: relative;
   height: 100%;
 }
