@@ -40,7 +40,7 @@ import { EffectCoverflow, Pagination } from "swiper";
 // Artist name variable, for changing a routing site and contain of swiper
 let artistName = "Leon Bakst";
 let imageNumber = 1;
-
+let srcCode = "src/assets/" + artistName + "/" + imageNumber + ".jpg";
 export default {
   components: {
     Swiper,
@@ -58,7 +58,7 @@ export default {
           name: "Leon Bakst",
           age: "1234",
           src: [
-            "src/assets/" + artistName + "/" + imageNumber + ".jpg",
+            srcCode,
             "src/assets/Leon Bakst/" + "2" + ".jpg",
             "src/assets/Leon Bakst/" + "3" + ".jpg",
           ],
@@ -78,6 +78,11 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    displayImages() {
+      //if (imageNumber < number
+    },
   },
 };
 </script>
